@@ -33,6 +33,10 @@ gem "compass"
 gem "tzinfo"
 gem "exceptional"
 
+#i18n
+gem "fast_gettext"
+
+
 group :development, :test do
   gem "minitest", :platforms => :ruby_18
   gem "minitest", :platforms => :ruby_18
