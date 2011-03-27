@@ -55,6 +55,9 @@ GEM
       oauth2 (>= 0.1.0)
       restclient_with_cert
       rack (< 2, >= 1.1.0)
+    faraday_middleware (0.3.2)
+      faraday (~> 0.5.4)
+    fast_gettext (0.5.11)
     ffi (1.0.7)
       rake (>= 0.8.7)
     gettext (2.1.0)

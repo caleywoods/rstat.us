@@ -34,12 +34,12 @@ gem "tzinfo"
 gem "exceptional"
 
 #i18n
-gem "gettext"
 gem "sinatra-hat"
+gem "fast_gettext"
 
 group :development, :test do
   gem "minitest", :platforms => :ruby_18
-  gem "minitest", :platforms => :ruby_18
+  gem "gettext"
   gem 'coffee-script'
   gem 'rack-test'
   gem "database_cleaner"
