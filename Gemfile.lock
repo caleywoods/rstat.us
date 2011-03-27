@@ -54,8 +54,11 @@ GEM
       json (>= 1.4.3)
       oauth2 (>= 0.1.0)
       restclient_with_cert
+      rack (< 2, >= 1.1.0)
     ffi (1.0.7)
       rake (>= 0.8.7)
+    gettext (2.1.0)
+      locale (>= 2.0.5)
     haml (3.0.25)
     hashie (1.0.0)
     i18n (0.5.0)
@@ -67,6 +70,7 @@ GEM
     json (1.5.1)
     json_pure (1.5.1)
     libxml-ruby (1.1.4)
+    locale (2.0.5)
     mail (2.2.15)
       activesupport (>= 2.3.6)
       i18n (>= 0.4.0)
@@ -186,12 +190,13 @@ GEM
     simple_oauth (0.1.4)
     sinatra (1.2.1)
       rack (~> 1.1)
-      tilt (>= 1.2.2, < 2.0)
+      tilt (< 2.0, >= 1.2.2)
     sinatra-content-for (0.2)
       sinatra
     sinatra-redirect-with-flash (0.1.2)
       rack-flash (>= 0.1.1)
       sinatra (>= 0.9.1)
+    sinatra-hat (0.0.4)
     tilt (1.2.2)
     time-lord (0.1.5)
     treetop (1.4.9)
@@ -230,6 +235,7 @@ DEPENDENCIES
   factory_girl
   fast_gettext
   fb_graph
+  gettext
   haml
   i18n
   jammit
@@ -258,6 +264,7 @@ DEPENDENCIES
   sinatra-content-for
   sinatra-redirect-with-flash
   time-lord
+  sinatra-hat
   twitter
   tzinfo
   vcr

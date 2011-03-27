@@ -34,8 +34,8 @@ gem "tzinfo"
 gem "exceptional"
 
 #i18n
-gem "fast_gettext"
-
+gem "gettext"
+gem "sinatra-hat"
 
 group :development, :test do
   gem "minitest", :platforms => :ruby_18
