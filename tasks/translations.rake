@@ -13,9 +13,14 @@ end
 
 task :makemo do
   require 'gettext/tools'
-  GetText.create_mofiles(
-    true, #verbosity
-    'translations', #po root
-    'locale', #targetdir
-  )
+  # * options: options as a Hash.
+  #   * verbose: true if verbose mode, otherwise false
+  #   * po_root: the root directory of po-files.
+  #   * mo_root: the target root directory where the mo-files are stored.
+  #   * mo_path_rule: the target directory for each mo-files.
+  GetText.create_mofiles({
+    :verbose =>  true, #verbosity
+    :po_root => 'translations', #po root
+    :mo_root => 'locale', #targetdir
+  })
 end
