@@ -79,6 +79,9 @@ require_relative "config/config"
 include FastGettext::Translation
 require 'gettext/haml' #from sinatra-hat, apparently must be loaded after the above line
 
+include FastGettext::Translation
+require 'gettext/haml'
+
 Dir.glob("controllers/*.rb").each { |r| require_relative r }
 
 class Rstatus
