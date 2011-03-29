@@ -7,80 +7,29 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: rstat.us 1.0.0\n"
-"POT-Creation-Date: 2011-03-27 13:57-0400\n"
+"POT-Creation-Date: 2011-03-29 00:30-0400\n"
 "PO-Revision-Date: 2011-03-27 13:57-0400\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 
-#: views/signup/confirm.haml:1
-msgid "Finish Signup"
+#: views/_username_error.haml:1
+msgid "Warning: your username is currently empty or invalid."
 msgstr ""
 
-#: views/signup/confirm.haml:2
-msgid "Okay! Almost done. Pick a username and a password, please:"
+#: views/_username_error.haml:2
+msgid "Please"
 msgstr ""
 
-#: views/signup/confirm.haml:3 views/users/new.haml:3
-msgid "Username:"
+#: views/_username_error.haml:3
+msgid "click here to reset your username."
 msgstr ""
 
-#: views/signup/confirm.haml:4 views/signup/invalid_credentials.haml:5 views/login.haml:4
-msgid "Password"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:1
-msgid "I'm sorry, but your attempt to make an account didn't work. Would you care to try again?"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:2 views/login.haml:1
-msgid "Log In"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:3 views/login.haml:2
-msgid "Sign in with your rstat.us email and password"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:4 views/login.haml:3
-msgid "Username"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:6 views/index.haml:7 views/login.haml:5
-msgid "Sign Up"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:7 views/login.haml:6
-msgid "New to rstat.us? Create a new account with your email address:"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:8 views/index.haml:5 views/login.haml:7
-msgid "Email"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:9 views/login.haml:8
-msgid "Want to sign in with Twitter or Facebook?"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:10 views/login.haml:9
-msgid "Use the links below:"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:11 views/index.haml:3 views/login.haml:10
-msgid "Twitter"
-msgstr ""
-
-#: views/signup/invalid_credentials.haml:12 views/index.haml:4 views/login.haml:11
-msgid "Facebook"
-msgstr ""
-
-#: views/signup/thanks.haml:1
-msgid "Thanks for signing up! Check your email: you should have a link to verify your account."
-msgstr ""
-
-#: views/layout.haml:1 views/_head.haml:1 views/updates/footer.haml:1 views/index.haml:1
+#: views/layout.haml:1 views/updates/footer.haml:1 views/index.haml:1
 #: views/footer.haml:1
 msgid "rstat.us"
 msgstr ""
@@ -134,49 +83,132 @@ msgid "Contact Us"
 msgstr ""
 
 #: views/contact.haml:2
-msgid "Please don't hesitate to send us a message with what you think! All feedback, suggestions, and bug reports are welcome."
+msgid ""
+"Please don't hesitate to send us a message with what you think! All "
+"feedback, suggestions, and bug reports are welcome."
 msgstr ""
 
 #: views/contact.haml:3
-msgid "Just send an email: <a href=\"mailto:steve+rstatus@steveklabnik.com\">steve+rstatus@steveklabnik.com</a>."
+msgid ""
+"Just send an email: <a href=\"mailto:steve+rstatus@steveklabnik.com\">steve"
+"+rstatus@steveklabnik.com</a>."
 msgstr ""
 
 #: views/contact.haml:4
 msgid "irc: irc.freenode.net #rstatus"
 msgstr ""
 
-#: views/replies.haml:4 views/dashboard.haml:5 views/hashtags.haml:5 views/world.haml:5
-#: views/users/list.haml:3 views/users/show.haml:20 views/users/index.haml:11
+#: views/replies.haml:3 views/dashboard.haml:4 views/hashtags.haml:4
+#: views/world.haml:4 views/search.haml:3 views/users/list.haml:3
+#: views/users/show.haml:20 views/users/index.haml:11
 msgid "&laquo; Previous"
 msgstr ""
 
-#: views/replies.haml:6 views/dashboard.haml:7 views/hashtags.haml:7 views/world.haml:7
-#: views/users/list.haml:5 views/users/show.haml:22 views/users/index.haml:13
+#: views/replies.haml:5 views/dashboard.haml:6 views/hashtags.haml:6
+#: views/world.haml:6 views/search.haml:5 views/users/list.haml:5
+#: views/users/show.haml:22 views/users/index.haml:13
 msgid "Next &raquo;"
+msgstr ""
+
+#: views/forgot_password.haml:1 views/login.haml:5
+msgid "Forgot Password"
+msgstr ""
+
+#: views/forgot_password.haml:2
+msgid ""
+"Just provide us with the email address on your account and we will send you "
+"an email with a link to reset your password."
+msgstr ""
+
+#: views/forgot_password.haml:3 views/users/confirm.haml:4
+#: views/users/password_reset.haml:7
+msgid "Email:"
+msgstr ""
+
+#: views/reset_username.haml:1
+msgid "Please enter a new username"
+msgstr ""
+
+#: views/reset_username.haml:2 views/login.haml:3
+msgid "Username"
+msgstr ""
+
+#: views/_head.haml:1
+msgid "<!--[if (!IE)|(gte IE 8)]><!-->"
+msgstr ""
+
+#: views/_head.haml:2
+msgid "<!--<![endif]-->"
+msgstr ""
+
+#: views/_head.haml:3
+msgid "<!--[if lte IE 7]>"
+msgstr ""
+
+#: views/_head.haml:4
+msgid ""
+"<link href=\"assets/screen.css\" media=\"screen\" rel=\"stylesheet\" type="
+"\"text/css\" />"
+msgstr ""
+
+#: views/_head.haml:5
+msgid "<![endif]-->"
+msgstr ""
+
+#: views/reset_password.haml:1 views/users/password_reset.haml:4
+msgid "Password Reset"
+msgstr ""
+
+#: views/reset_password.haml:2 views/users/password_reset.haml:8
+msgid "Password:"
+msgstr ""
+
+#: views/reset_password.haml:3 views/users/password_reset.haml:9
+msgid "Password Confirm:"
 msgstr ""
 
 #: views/updates/show.haml:1
 msgid "by"
 msgstr ""
 
-#: views/updates/show.haml:3 views/_updates.haml:6
+#: views/updates/show.haml:3 views/_updates.haml:7
 msgid "in reply to"
 msgstr ""
 
-#: views/updates/show.haml:5 views/_updates.haml:8
+#: views/updates/show.haml:5 views/_updates.haml:9
 msgid "share"
 msgstr ""
 
-#: views/updates/show.haml:6 views/_updates.haml:9
+#: views/updates/show.haml:6 views/_updates.haml:10
 msgid "|"
 msgstr ""
 
-#: views/updates/show.haml:7 views/_updates.haml:10
+#: views/updates/show.haml:7 views/_updates.haml:11
 msgid "reply"
+msgstr ""
+
+#: views/search.haml:1
+msgid "Search"
 msgstr ""
 
 #: views/index.haml:2
 msgid "Sign in with"
+msgstr ""
+
+#: views/index.haml:3 views/login.haml:8 views/_update_form.haml:3
+msgid "Twitter"
+msgstr ""
+
+#: views/index.haml:4 views/login.haml:9 views/_update_form.haml:5
+msgid "Facebook"
+msgstr ""
+
+#: views/index.haml:5
+msgid "Email"
+msgstr ""
+
+#: views/index.haml:7
+msgid "Sign Up"
 msgstr ""
 
 #: views/index.haml:8
@@ -204,7 +236,12 @@ msgid "## rstat.us?"
 msgstr ""
 
 #: views/index.haml:14
-msgid "Microblogging has taken the world by storm. Millions of people around the world now share their thoughts with friends, family, and random strangers every day. Links are shared, stories are told, and events are discussed. rstatus is the newest place to participate in the collective conscious of the planet."
+msgid ""
+"Microblogging has taken the world by storm. Millions of people around the "
+"world now share their thoughts with friends, family, and random strangers "
+"every day. Links are shared, stories are told, and events are discussed. "
+"rstatus is the newest place to participate in the collective conscious of "
+"the planet."
 msgstr ""
 
 #: views/index.haml:15
@@ -212,19 +249,33 @@ msgid "### What's different about it?"
 msgstr ""
 
 #: views/index.haml:16
-msgid "There are two things that make rstat.us special: _simplicity_ and _openness_."
+msgid ""
+"There are two things that make rstat.us special: _simplicity_ and _openness_."
 msgstr ""
 
 #: views/index.haml:17
-msgid "**Simplicity** is a core 'feature' of rstat.us. We pride ourselves on saying 'no' to lots of features. Our interface is clean, and easy to understand. We give you just enough features to be interesting, but not enough to be complicated and confusing. "
+msgid ""
+"**Simplicity** is a core 'feature' of rstat.us. We pride ourselves on saying "
+"'no' to lots of features. Our interface is clean, and easy to understand. We "
+"give you just enough features to be interesting, but not enough to be "
+"complicated and confusing. "
 msgstr ""
 
 #: views/index.haml:18
-msgid "If you're a software developer, you'll probably want to check out our [Open Source page](/open_source). If that's greek to you, here's the deal on **Openness**: the programming code that makes up rstat.us is available for anyone to download, free of charge. Programmers can use that code to run their own websites just like rstat.us, and you can subscribe to your friends on any site that supports the [OStatus protocol](http://ostatus.org/about), like [identi.ca](http://identi.ca/). This also means that you can own your data, we'll never stop you from having full access to everything you've put into rstat.us."
+msgid ""
+"If you're a software developer, you'll probably want to check out our [Open "
+"Source page](/open_source). If that's greek to you, here's the deal on "
+"**Openness**: the programming code that makes up rstat.us is available for "
+"anyone to download, free of charge. Programmers can use that code to run "
+"their own websites just like rstat.us, and you can subscribe to your friends "
+"on any site that supports the [OStatus protocol](http://ostatus.org/about), "
+"like [identi.ca](http://identi.ca/). This also means that you can own your "
+"data, we'll never stop you from having full access to everything you've put "
+"into rstat.us."
 msgstr ""
 
 #: views/index.haml:19
-msgid "The **rstat.us** team"
+msgid "~ The **rstat.us** team"
 msgstr ""
 
 #: views/index.haml:20
@@ -253,6 +304,28 @@ msgstr ""
 
 #: views/footer.haml:6
 msgid "Open Source"
+msgstr ""
+
+#: views/login.haml:1
+msgid "Log In or Sign up"
+msgstr ""
+
+#: views/login.haml:2
+msgid ""
+"One form, no problem: Put in a username and password, and we'll take care of "
+"the rest."
+msgstr ""
+
+#: views/login.haml:4
+msgid "Password"
+msgstr ""
+
+#: views/login.haml:6
+msgid "Want to sign in with Twitter or Facebook?"
+msgstr ""
+
+#: views/login.haml:7
+msgid "Use the links below:"
 msgstr ""
 
 #: views/error.haml:1
@@ -284,11 +357,14 @@ msgid "Browsers like Google Chrome and Internet Explorer decide not to display"
 msgstr ""
 
 #: views/error.haml:8
-msgid "error pages if the content length of the page is too short.  For Internet Explorer,"
+msgid ""
+"error pages if the content length of the page is too short.  For Internet "
+"Explorer,"
 msgstr ""
 
 #: views/error.haml:9
-msgid "it appears the magic number is 512 bytes.  To be safe, make sure your error"
+msgid ""
+"it appears the magic number is 512 bytes.  To be safe, make sure your error"
 msgstr ""
 
 #: views/error.haml:10
@@ -296,7 +372,8 @@ msgid "pages are long enough.  This little comment is here to do just that."
 msgstr ""
 
 #: views/error.haml:11
-msgid "Maybe some day there will be a really witty 404 page here.  I'm thinking"
+msgid ""
+"Maybe some day there will be a really witty 404 page here.  I'm thinking"
 msgstr ""
 
 #: views/error.haml:12
@@ -312,7 +389,10 @@ msgid "Follow a User"
 msgstr ""
 
 #: views/external_subscription.haml:2
-msgid "You can follow your friends from other sites that use the ostatus protocol. Check below for the list of ostatus sites we support, and let us know if you'd like us to add another."
+msgid ""
+"You can follow your friends from other sites that use the ostatus protocol. "
+"Check below for the list of ostatus sites we support, and let us know if "
+"you'd like us to add another."
 msgstr ""
 
 #: views/external_subscription.haml:3
@@ -324,15 +404,17 @@ msgid "identi.ca"
 msgstr ""
 
 #: views/external_subscription.haml:5
-msgid "Copy the link to the Atom feed from a user's profile in identi.ca and paste it into the field to your right."
+msgid ""
+"Copy the link to the Atom feed from a user's profile in identi.ca and paste "
+"it into the field to your right."
 msgstr ""
 
 #: views/_update_form.haml:1
 msgid "What's going on?"
 msgstr ""
 
-#: views/_updates.haml:13
-msgid "There's no updates here yet"
+#: views/_updates.haml:14
+msgid "There are no updates here yet"
 msgstr ""
 
 #: views/users/edit.haml:2
@@ -355,12 +437,42 @@ msgstr ""
 msgid "account to set and update your avatar."
 msgstr ""
 
+#: views/users/edit.haml:8 views/users/password_reset.haml:2
+msgid "Set Password"
+msgstr ""
+
+#: views/users/edit.haml:10
+msgid "Reset Password"
+msgstr ""
+
+#: views/users/edit.haml:11
+msgid "Linked Accounts"
+msgstr ""
+
+#: views/users/confirm.haml:1
+msgid "Confirm account information"
+msgstr ""
+
+#: views/users/confirm.haml:2
+msgid ""
+"You are one step away from your new rstat.us account. Make sure you have the "
+"right username, provide an email address and you are all set."
+msgstr ""
+
+#: views/users/confirm.haml:3 views/users/new.haml:3
+msgid "Username:"
+msgstr ""
+
 #: views/users/list.haml:1
 msgid "#{title}"
 msgstr ""
 
+#: views/users/password_reset.haml:6
+msgid "You must provide an email address in order to set your password"
+msgstr ""
+
 #: views/users/_profile_field.haml:1
-msgid "#{attr.capitalize}:"
+msgid "#{attr.to_s.capitalize}:"
 msgstr ""
 
 #: views/users/show.haml:1
@@ -416,7 +528,25 @@ msgid "Pick a new username"
 msgstr ""
 
 #: views/users/new.haml:2
-msgid "Hey, we're sorry about this, but someone already has your username. Mind picking a new one?"
+msgid ""
+"Hey, we're sorry about this, but someone already has your username. Mind "
+"picking a new one?"
+msgstr ""
+
+#: views/notifier/forgot_password.haml:1
+msgid "To reset your password for rstat.us please click on the link below."
+msgstr ""
+
+#: views/notifier/forgot_password.haml:2
+msgid "http://rstat.us/reset_password/#{token}"
+msgstr ""
+
+#: views/notifier/forgot_password.haml:3
+msgid "Please be aware that this link will only be valid for 2 days."
+msgstr ""
+
+#: views/notifier/forgot_password.haml:4 views/notifier/signup.haml:4
+msgid "- The rstat.us site Robot"
 msgstr ""
 
 #: views/notifier/signup.haml:1
@@ -431,8 +561,8 @@ msgstr ""
 msgid "http://rstat.us/confirm/#{token}"
 msgstr ""
 
-#: views/notifier/signup.haml:4
-msgid "- The rstat.us site Robot"
+#: views/forgot_password_confirm.haml:1
+msgid "Forgot Password Confirmation"
 msgstr ""
 
 #: views/opensource.haml:1
@@ -440,7 +570,8 @@ msgid "# Open Source"
 msgstr ""
 
 #: views/opensource.haml:2
-msgid "rstat.us is entirely, 100% Open Source, and so is our development stack."
+msgid ""
+"rstat.us is entirely, 100% Open Source, and so is our development stack."
 msgstr ""
 
 #: views/opensource.haml:3
@@ -456,7 +587,9 @@ msgid "- [Website](http://rstat.us) (duh)"
 msgstr ""
 
 #: views/opensource.haml:6
-msgid "- License: [WTFPL](https://github.com/hotsh/rstat.us/raw/be79740ed0f19b3a02e15dbcdbbdb8ca36509819/LICENSE) (essentially public domain)"
+msgid ""
+"- License: [WTFPL](https://github.com/hotsh/rstat.us/raw/"
+"be79740ed0f19b3a02e15dbcdbbdb8ca36509819/LICENSE) (essentially public domain)"
 msgstr ""
 
 #: views/opensource.haml:7
@@ -496,7 +629,9 @@ msgid "- [Website](http://sinatrarb.com)"
 msgstr ""
 
 #: views/opensource.haml:16
-msgid "- License: [MIT](https://github.com/sinatra/sinatra/raw/79032f794175bd9f712751cfbd004315b8ddf8f2/LICENSE)"
+msgid ""
+"- License: [MIT](https://github.com/sinatra/sinatra/"
+"raw/79032f794175bd9f712751cfbd004315b8ddf8f2/LICENSE)"
 msgstr ""
 
 #: views/opensource.haml:17
@@ -516,7 +651,9 @@ msgid "- [Website](http://mongodb.org)"
 msgstr ""
 
 #: views/opensource.haml:21
-msgid "- License: [AGPLv3](https://github.com/mongodb/mongo/raw/master/GNU-AGPL-3.0.txt)"
+msgid ""
+"- License: [AGPLv3](https://github.com/mongodb/mongo/raw/master/GNU-AGPL-3.0."
+"txt)"
 msgstr ""
 
 #: views/opensource.haml:22
@@ -552,5 +689,7 @@ msgid "- [Website](http://code.google.com/p/pubsubhubbub/)"
 msgstr ""
 
 #: views/opensource.haml:30
-msgid "- [Spec Document](http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-core-0.3.html)"
+msgid ""
+"- [Spec Document](http://pubsubhubbub.googlecode.com/svn/trunk/pubsubhubbub-"
+"core-0.3.html)"
 msgstr ""
