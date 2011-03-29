@@ -36,6 +36,7 @@ gem "exceptional"
 #i18n
 gem "sinatra-hat"
 gem "fast_gettext"
+gem "rack-contrib", :require => 'rack/contrib'
 
 group :development, :test do
   gem "minitest", :platforms => :ruby_18

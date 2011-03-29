@@ -78,6 +78,9 @@ require_relative "config"
 include FastGettext::Translation
 require 'gettext/haml'
 
+include FastGettext::Translation
+require 'gettext/haml'
+
 Dir.glob("controllers/*.rb").each { |r| require_relative r }
 
 class Rstatus
@@ -85,6 +88,7 @@ class Rstatus
   before do
     FastGettext.add_text_domain('rstat.us', :path => 'locale')
     FastGettext.text_domain = 'rstat.us'
+    FastGettext.locale = env['rack.locale'] || 'en'
   end
 
   get '/' do

@@ -49,7 +49,6 @@ GEM
     faraday_middleware (0.6.3)
       faraday (~> 0.6.0)
     fast_gettext (0.5.11)
-    fb_graph (1.6.5)
       activesupport (>= 2.3)
       json (>= 1.4.3)
       oauth2 (>= 0.1.0)
@@ -152,6 +151,8 @@ GEM
     pygmentize (0.0.2)
     pyu-ruby-sasl (0.0.3.2)
     rack (1.2.2)
+    rack-contrib (1.1.0)
+      rack (>= 0.9.1)
     rack-flash (0.1.1)
       rack
     rack-openid (1.2.0)
@@ -254,6 +255,7 @@ DEPENDENCIES
   osub
   pony
   pygmentize
+  rack-contrib
   rack-flash
   rack-test
   rack-timeout
