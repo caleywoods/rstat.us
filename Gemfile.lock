@@ -49,14 +49,11 @@ GEM
     faraday_middleware (0.6.3)
       faraday (~> 0.6.0)
     fast_gettext (0.5.11)
+    fb_graph (1.6.5)
       activesupport (>= 2.3)
       json (>= 1.4.3)
       oauth2 (>= 0.1.0)
       restclient_with_cert
-      rack (< 2, >= 1.1.0)
-    faraday_middleware (0.3.2)
-      faraday (~> 0.5.4)
-    fast_gettext (0.5.11)
     ffi (1.0.7)
       rake (>= 0.8.7)
     gettext (2.1.0)
@@ -194,13 +191,13 @@ GEM
     simple_oauth (0.1.4)
     sinatra (1.2.1)
       rack (~> 1.1)
-      tilt (< 2.0, >= 1.2.2)
+      tilt (>= 1.2.2, < 2.0)
     sinatra-content-for (0.2)
       sinatra
+    sinatra-hat (0.0.4)
     sinatra-redirect-with-flash (0.1.2)
       rack-flash (>= 0.1.1)
       sinatra (>= 0.9.1)
-    sinatra-hat (0.0.4)
     tilt (1.2.2)
     time-lord (0.1.5)
     treetop (1.4.9)
@@ -267,9 +264,9 @@ DEPENDENCIES
   sass
   sinatra
   sinatra-content-for
+  sinatra-hat
   sinatra-redirect-with-flash
   time-lord
-  sinatra-hat
   twitter
   tzinfo
   vcr
