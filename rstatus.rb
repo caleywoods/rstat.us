@@ -79,7 +79,7 @@ include FastGettext::Translation
 require 'gettext/haml'
 
 include FastGettext::Translation
-require 'gettext/haml'
+require 'gettext/haml' #from sinatra-hat, apparently must be loaded after the above line
 
 Dir.glob("controllers/*.rb").each { |r| require_relative r }
 
