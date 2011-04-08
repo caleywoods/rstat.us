@@ -75,8 +75,6 @@ require_relative "helpers"
 class Rstatus < Sinatra::Base; end;
 
 require_relative "config"
-include FastGettext::Translation
-require 'gettext/haml'
 
 include FastGettext::Translation
 require 'gettext/haml' #from sinatra-hat, apparently must be loaded after the above line
