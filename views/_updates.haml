@@ -1,15 +1,16 @@
 - updates.each do |update|
+  - mine = false; mentioned = false;
   - if !defined?(no_highlight)
-    - mine = current_user.nil? ? false : (update.author.user == current_user)
-  - mentioned = current_user.nil? ? false : update.mentioned?(current_user.username)
-  - mine = current_user.nil? ? false : update.author.user == current_user
-  .update.hentry{:class => (mentioned ? "mention " : "") + (mine ? "mine " : ""), :id => "update-#{update.id}", "data-id" => update.id, "data-name" => update.author.username}
+    - mine = current_user.nil? ? false : (update.author_id == current_user.author_id)
+    - mentioned = current_user.nil? ? false : update.mentioned?(current_user.username)
+
+  .update.hentry{:class => (mentioned ? "mention " : "") + (mine ? "mine " : ""), :id => "update-#{update.id}", "data-id" => update.id, "data-name" => update.username}
     .author.vcard
       .avatar
-        %a.url{:href => update.author.url}
-          %img.photo{:alt => "avatar", :src => update.author.avatar_url}/
-      %span.fn= update.author.display_name
-      (<span class="nickname">#{update.author.username}</span>)
+        %a.url{:href => update.author_url}
+          %img.photo{:alt => "avatar", :src => update.avatar_url}/
+      %span.fn= update.name
+      (<span class="nickname">#{update.username}</span>)
     .entry-content
       != update.to_html
 
@@ -19,18 +20,18 @@
 
       -unless update.referral.nil?
         .in-reply
-          %a{:href => "/updates/#{update.referral.id}"}
+          %a{:href => "/updates/#{update.referral_id}"}
             in reply to
             %span.name= update.referral.author.username
 
     .end-links
       -# when @timeline is true, this is a list on the user's page
-      -unless current_user.nil? or (current_user.author.id == update.author.id)
+      -unless current_user.nil? or (current_user.author_id == update.author_id)
         %a.share{:href => "/?share=#{update.id}"} share
         |
         %a.reply{:href => "/?reply=#{update.id}"} reply
 
-      - if current_user and update.author.id == current_user.author.id
+      - if current_user and update.author_id == current_user.author_id
         %form{:method => "post", :action => "/updates/#{update.id}"}
           %input{:type => "hidden", :name => "_method", :value => "delete"}
           %input.remove-update{:type => "submit", :value => "I Regret This"}

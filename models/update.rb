@@ -7,6 +7,7 @@ class Update
 
   belongs_to :feed
   belongs_to :author
+  key :author_id, ObjectId, :index => true
 
   key :text, String, :default => ""
   key :html, String
@@ -14,6 +15,12 @@ class Update
   key :language, String
   key :twitter, Boolean
   key :facebook, Boolean
+
+  # Denormalized author data
+  key :username, String
+  key :name, String
+  key :avatar_url, String
+  key :author_url, String
 
   before_save :generate_html
 

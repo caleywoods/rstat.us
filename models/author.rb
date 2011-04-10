@@ -10,6 +10,8 @@ class Author
 
   include MongoMapper::Document
 
+  after_update :update_posts
+
   key :username, String
   key :name, String
   key :email, String
@@ -62,4 +64,20 @@ class Author
   def gravatar_path
     "/avatar/#{Digest::MD5.hexdigest(email)}?s=48&r=r&d=#{ENCODED_DEFAULT_AVATAR}"
   end
+  
+  # Manage update information
+  def update_posts
+    update_params = {
+      :username => username,
+      :name => display_name,
+      :avatar_url => avatar_url,
+      :author_url => url
+    }
+    
+    result = Update.collection.update(
+      {:author_id => self.id}, 
+      {"$set" => update_params}, # When performing a multi-record update, use $ operators
+      {:multi => true})
+  end
+  
 end
