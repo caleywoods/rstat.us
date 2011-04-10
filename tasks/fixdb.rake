@@ -72,17 +72,7 @@ namespace :fixdb do
       update.save
     end
   end
-  
-  desc "Store author information in updates"
-  task :denormalize_updates => :environment do
-    Update.find_each do |update|
-      update.username = update.author.username
-      update.name = update.author.display_name
-      update.avatar_url = update.author.avatar_url
-      update.author_url = update.author.url
-      update.save
-    end
-  end
+
   
 end
 
