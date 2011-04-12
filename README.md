@@ -83,6 +83,18 @@ jammit using yui compressor and closure compiler. Installing a JDK, such as
 [coffee-install]: http://jashkenas.github.com/coffee-script/#installation
 [openjdk]: http://openjdk.java.net/
 
+Translations
+------------
+
+We use gettext for translations. Please contribute only if you have
+a sufficient working knowledge of a language to do so. 
+
+To update the translations template file and each language's strings file, run
+`rake updatepo`. To build each language's database after making changes to po
+files, run `rake makemo`.
+
+For now, you can commit your mo files in addition to po files.
+
 Running your own node
 ---------------------
 
