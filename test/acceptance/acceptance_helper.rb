@@ -1,7 +1,6 @@
 require 'rack/test'
 require 'vcr'
 
-require_relative '../../rstatus'
 require_relative '../test_helper'
 
 VCR.config do |c|
@@ -40,13 +39,13 @@ module AcceptanceHelper
 
     visit '/auth/twitter'
   end
-  
+
   def log_in_fb(u, uid = 12345)
     omni_mock(u.username, {:uid => uid, :provider => :facebook})
 
     visit '/auth/facebook'
   end
-  
+
   def log_in_email(user, remember_me = false)
     User.stubs(:authenticate).returns(user)
     visit "/login"
@@ -66,6 +65,6 @@ module AcceptanceHelper
   def session_expires
     cookies.send(:hash_for)['rack.session'].expires
   end
-  
+
   Capybara.app = Rstatus
 end
