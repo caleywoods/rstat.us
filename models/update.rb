@@ -21,8 +21,11 @@ class Update
   key :name, String
   key :avatar_url, String
   key :author_url, String
+  key :referral_username, String
+  key :referral_author_id, ObjectId, :index => true
 
   before_save :generate_html
+  before_create :get_author_data
 
   validates_length_of :text, :minimum => 1, :maximum => 140
   before_create :get_tags
@@ -100,6 +103,17 @@ class Update
       "#{$1}<a href='/hashtags/#{$2}'>##{$2}</a>"
     end
     self.html = out
+  end
+  
+  def get_author_data
+    self.username = author.username
+    self.name = author.display_name
+    self.avatar_url = author.avatar_url
+    self.author_url = author.url
+    unless self.referral_id.nil? || self.referral_id.blank?
+      self.referral_username = referral.author.username
+      self.referral_author_id = referral.author.id
+    end
   end
 
   # If a user has twitter or facebook enabled on their account and they checked

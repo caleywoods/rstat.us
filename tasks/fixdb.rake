@@ -69,6 +69,10 @@ namespace :fixdb do
       update.name = update.author.display_name
       update.avatar_url = update.author.avatar_url
       update.author_url = update.author.url
+      if update.referral and update.referral.author
+        update.referral_username = update.referral.author.username
+        update.referral_author_id = update.referral.author.id
+      end
       update.save
     end
   end

@@ -20,6 +20,36 @@ class UpdateTest < MiniTest::Unit::TestCase
     refute u.save, "I made an update with over 140 characters"
   end
 
+  def test_user_data
+    a = Factory(:author, :username => "Arthur")
+    u = Update.new(:text => "My voice is my passport. Denormalize me.", :author => a)
+    u.save
+    assert_match u.username, a.username
+  end
+  
+  def test_user_data_after_update
+    a = Factory(:author, :username => "Arthur")
+    u = Update.new(:text => "My voice is my passport. Denormalize me.", :author => a)
+    u.save
+    a.username = "Werner Brandes"
+    a.save
+    u = Update.find(u.id)
+    assert_match u.username, a.username
+  end
+
+  def test_referral_data_after_update
+    a = Factory(:author, :username => "Arthur")
+    b = Factory(:author, :username => "Beatrice")
+    u1 = Update.new(:text => "Call", :author => a)
+    u1.save
+    u2 = Update.new(:text => "Response", :referral_id => u1.id, :author => b)
+    u2.save
+    a.username = "Werner Brandes"
+    a.save
+    u2 = Update.find(u2.id)
+    assert_match u2.referral_username, a.username
+  end
+
   def test_at_replies_with_not_existing_user
     u = Update.new(:text => "This is a message mentioning @steveklabnik.")
     assert_match "This is a message mentioning @steveklabnik.", u.to_html

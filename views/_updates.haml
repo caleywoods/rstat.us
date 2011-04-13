@@ -18,11 +18,11 @@
       %time.published{:pubdate => "pubdate", :datetime => update.created_at.iso8601}
         %a{:href => update.url, :rel => "bookmark"}= update.created_at.ago_in_words
 
-      -unless update.referral.nil?
+      -unless update.referral_id.nil? || update.referral_id.empty?
         .in-reply
           %a{:href => "/updates/#{update.referral_id}"}
             in reply to
-            %span.name= update.referral.author.username
+            %span.name= update.referral_username
 
     .end-links
       -# when @timeline is true, this is a list on the user's page

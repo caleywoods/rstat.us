@@ -10,7 +10,7 @@ class Author
 
   GRAVATAR_HOST  = "gravatar.com"
 
-  after_update :update_posts
+  after_save :update_posts
 
   # We've got a bunch of data that gets stored in Author. And basically none
   # of it is validated right now. Fun. Then again, not all of it is neccesary.
@@ -72,6 +72,7 @@ class Author
   
   # Manage update information
   def update_posts
+    # Update my posts
     update_params = {
       :username => username,
       :name => display_name,
@@ -82,6 +83,16 @@ class Author
     result = Update.collection.update(
       {:author_id => self.id}, 
       {"$set" => update_params}, # When performing a multi-record update, use $ operators
+      {:multi => true})
+      
+    # Update posts referencing me
+    update_params = {
+      :referral_username => username,
+    }
+    
+    result = Update.collection.update(
+      {:referral_author_id => self.id}, 
+      {"$set" => update_params},
       {:multi => true})
   end
   
