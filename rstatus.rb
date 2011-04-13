@@ -90,6 +90,8 @@ class Rstatus
     FastGettext.add_text_domain('rstat.us', :path => 'locale')
     FastGettext.text_domain = 'rstat.us'
     FastGettext.locale = env['rack.locale'] || 'en'
+    #FastGettext.locale_path
+    #puts _("Share")
   end
 
   get '/' do
