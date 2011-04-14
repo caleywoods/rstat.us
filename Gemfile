@@ -34,9 +34,14 @@ gem "tzinfo"
 gem "exceptional"
 gem "rack-perftools_profiler", :require => 'rack/perftools_profiler'
 
+#i18n
+gem "sinatra-hat"
+gem "fast_gettext"
+gem "rack-contrib", :require => 'rack/contrib'
+
 group :development, :test do
   gem "minitest", :platforms => :ruby_18
-  gem "minitest", :platforms => :ruby_18
+  gem "gettext"
   gem 'coffee-script'
   gem 'rack-test'
   gem "database_cleaner"

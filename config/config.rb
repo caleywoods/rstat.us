@@ -84,4 +84,5 @@ class Rstatus
     provider :facebook, ENV["APP_ID"], ENV["APP_SECRET"], {:scope => 'publish_stream,offline_access,email'}
   end
 
+  use Rack::Locale
 end

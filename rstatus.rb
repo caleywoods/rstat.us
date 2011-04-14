@@ -76,9 +76,23 @@ class Rstatus < Sinatra::Base; end;
 
 require_relative "config/config"
 
+include FastGettext::Translation
+require 'gettext/haml' #from sinatra-hat, apparently must be loaded after the above line
+
+include FastGettext::Translation
+require 'gettext/haml'
+
 Dir.glob("controllers/*.rb").each { |r| require_relative r }
 
 class Rstatus
+
+  before do
+    FastGettext.add_text_domain('rstat.us', :path => 'locale')
+    FastGettext.text_domain = 'rstat.us'
+    FastGettext.locale = env['rack.locale'] || 'en'
+    #FastGettext.locale_path
+    #puts _("Share")
+  end
 
   get '/' do
     if logged_in?
