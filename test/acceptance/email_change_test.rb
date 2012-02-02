@@ -33,7 +33,7 @@ describe "email change" do
   describe "token" do
     it "has a confirm email link with a token" do
       u = Factory(:user, :email => "someone@somewhere.com")
-      token = u.set_password_reset_token
+      token = u.set_email_confirmation_token
       visit "/confirm_email/#{token}"
 
       assert_match "Email successfully confirmed.", page.body

@@ -277,6 +277,12 @@ class User
     self.perishable_token
   end
 
+  # Create a perishable token, save it, and return it.
+  def set_email_confirmation_token
+    set_perishable_token
+    self.perishable_token
+  end
+
   # Set a new password, clear the date the password reset token was sent and
   # reset the perishable token
   def reset_password(pass)

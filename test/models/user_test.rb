@@ -106,6 +106,13 @@ describe User do
       u = Factory.create(:user)
       assert_equal u.email_confirmed.nil?, true
     end
+
+    it "sets the token" do
+      u = Factory.create(:user)
+      assert_nil u.perishable_token
+      u.set_email_confirmation_token
+      refute u.perishable_token.nil?
+    end
   end
 
   describe "reset password" do
