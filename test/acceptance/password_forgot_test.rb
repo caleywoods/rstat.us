@@ -19,7 +19,6 @@ describe "forgotten password" do
 
     visit "/forgot_password"
     fill_in "email", :with => "someone@somewhere.com"
-    save_and_open_page
     click_button "Send"
 
     u = User.first(:email => "someone@somewhere.com")
