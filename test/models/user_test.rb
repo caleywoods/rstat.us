@@ -110,7 +110,7 @@ describe User do
     it "sets the token" do
       u = Factory.create(:user)
       assert_nil u.perishable_token
-      u.set_email_confirmation_token
+      u.create_token
       refute u.perishable_token.nil?
     end
   end
@@ -119,10 +119,10 @@ describe User do
     it "sets the token" do
       u = Factory.create(:user)
       assert_nil u.perishable_token
-      assert_nil u.password_reset_sent
-      u.set_password_reset_token
+      assert_nil u.perishable_token_set
+      u.create_token
       refute u.perishable_token.nil?
-      refute u.password_reset_sent.nil?
+      refute u.perishable_token_set.nil?
     end
 
     it "changes the password" do
